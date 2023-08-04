@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../dist/output.css">
+    <title>Implementasi JS</title>
+</head>
+
+<body class="bg-[#FFD500]">
+    <header
+        class="bg-slate-100 bg-transparen absolute top-0 left-0 w-full flex items-center z-10 py-2 md:py-1 navbar-fixed">
+        <div class="container w-full py-2 flex items-center justify-center mx-auto relative">
+            <h1 class="text-3xl py-3 text-center items-center font-semibold">IMPLEMENTASI JAVASCRIPT</h1>
+        </div>
+    </header>
+
+    <!-- Section innerHtml start -->
+    <section class="pt-20">
+        <div class="container mx-auto px-5 my-8 block lg:w-[90%]">
+            <h2 class="text-xl font-bold pb-2">Ubah Dongeng (innerHTML)</h2>
+            <div class="bg-slate-100 w-full">
+                <h5 id="judul" class="container font-semibold text-center py-3">Si Kura-Kura yang Sombong</h5>
+                <hr class="border-b-4">
+                <p id="cerita" class="px-3 py-4">Seekor kura-kura sombong merasa dirinya lebih pantas terbang dibanding
+                    berenang dan
+                    jengkel karena tempurungnya yang berat. Dia pun selalu kesal ketika melihat burung-burung yang
+                    terbang bebas di langit. Suatu hari, kura-kura memaksa seekor angsa untuk membantunya terbang dan si
+                    angsa mengusulkan kura-kura berpegangan pada sebatang kayu. Batang kayu tersebut pun kemudian
+                    diangkat oleh angsa dan dibawa terbang. Sayangnya, genggaman tangan kura-kura melemah dan dia jatuh
+                    dengan keras. Untungnya kura-kura selamat karena keberadaan tempurung yang paling ia benci.</p>
+            </div>
+            <button id="btnDongeng"
+                class="rounded-md hover:bg-slate-200 hover:text-black ease-in-out transition bg-black text-white px-4 py-3 my-3 text-center">Ganti
+                Dongeng >></button>
+        </div>
+    </section>
+    <!-- Section innerHtml end-->
+
+    <!-- Section Date & Time start -->
+    <section>
+        <div class="container mx-auto px-5 block mb-12 lg:w-[90%]">
+            <h2 class="text-xl font-bold pb-3">Date & Time</h2>
+            <hr class="w-full">
+            <div class="bg-slate-100 w-full">
+                <h4 id="date" class="px-3 py-3 mx-auto">
+                    2024
+                </h4>
+                <h3 id="dateFormat" class="px-3 pb-3 mx-auto text-black">test</h3>
+                <h3 class="text-black px-3 pb-3 mx-auto">Expired Date (Flash Sale) : Mar 12, 2023 00:00:00</h3>
+            </div>
+            <div class="flex items-center justify-center bg-black mx-auto container">
+                <h1 class="text-2xl font-bold lg:text-4xl lg:font-extrabold text-white py-8">FLASH <span
+                        class="text-[#FFD500]">SALE</span></h1>
+                <img src="assets/icon/thunder-svgrepo-com.svg" alt="icons-thunder" class="w-10">
+                <div class="ml-9 rounded-xl bg-[#FFD500]">
+                    <h4 id="countdown" class="text-black border  font-semibold text-lg px-4 py-1">2023</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Section Date & Time end -->
+
+    <!-- Section If Pengkondisian start -->
+    <section>
+        <div class="container mx-auto my-8 px-5 block lg:w-[90%]">
+            <h2 class="text-xl font-bold pb-3">IF (Pengkondisian)</h2>
+            <div class=" flex">
+                <div class="bg-slate-100 w-1/2 border">
+                    <h4 class="text-center font-semibold py-3">Daftar Nilai</h4>
+                    <hr class="border-b-4">
+                    <h3 class="px-4 text-base pt-2">90 - 100 = A</h3>
+                    <h3 class="px-4 text-base">80 - 89 = B</h3>
+                    <h3 class="px-4 text-base">70 - 79 = C</h3>
+                    <h3 class="px-4 text-base">60 - 69 = D</h3>
+                    <h3 class="px-4 text-base">Kurang dari 60
+                        = E</h3>
+                    <h3 class="px-4 text-base pb-2">Lebih dari 100 = Nilai Melebihi Batas Maximum, Max 100.</h3>
+                </div>
+                <div class="w-1/2 bg-slate-100 border">
+                    <h4 class="text-center py-3 font-semibold">Cek Nilai</h4>
+                    <hr class="border-b-4">
+                    <input id="nilai" class="outline-4 px-3 mx-[54px] mt-5 lg:mx-[68px]" type="number">
+                    <button id="btnCekNilai" onclick="cekNilai()"
+                        class="border bg-black mx-10 mt-2 px-5 py-4 rounded-lg text-white hover:bg-white hover:text-black">Cek
+                        Nilai</button>
+                    <p id="hasil" class="mx-10">Lihat nilai anda disini </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Section If Pengkondisian end -->
+
+    <!-- Section Bermain Warna Math-Random start -->
+    <section>
+        <div class="container mx-auto mt-12 lg:w-[90%]">
+            <h2 class="text-xl mx-5 font-bold pb-3">Bermain Warna (Fungsi Math)</h2>
+            <div id="canvas" class="border bg-slate-100 mx-5 h-96 px-5">
+                <h3 class="text-center py-3 text-base font-semibold">Atur RGB yang anda inginkan :</h3>
+                <div class="block text-center pt-11">
+                    <h5 class="px">Red</h5>
+                    <input id="tRed" type="range" min="0" max="225">
+                </div>
+                <div class="block text-center">
+                    <h5 class="px">Green</h5>
+                    <input id="tGreen" type="range" min="0" max="225">
+                </div>
+                <div class="block text-center">
+                    <h5 class="px">Blue</h5>
+                    <input id="tBlue" type="range" min="0" max="225">
+                </div>
+                <div class="block text-center mt-10">
+                    <button id="warnaAcak"
+                        class="border py-2 px-4 rounded-lg bg-black text-white hover:bg-slate-100 hover:text-black">Warna
+                        Acak</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Section Bermain Warna Math-Random end -->
+
+    <!-- Email & Password Validation start -->
+    <section>
+        <div class="container mx-auto mt-12 lg:w-[90%] mb-10">
+            <h2 class="text-xl mx-5 font-bold pb-3">Email Validation & Password (Using Regex & Alert)</h2>
+            <div class="border bg-slate-100 h-72 lg:h-80 mx-5 flex">
+                <div class="w-1/2 text-center border">
+                    <h4 class="text-center font-semibold py-1">Email</h4>
+                    <hr class="border-b-4">
+                    <input id="email" class="mt-6 px-2 py-1" type="text">
+                    <div class="text-center">
+                        <button
+                            class="bg-black text-white rounded-lg hover:bg-white hover:text-black border my-4 px-6 py-2"
+                            onclick="validateEmail()">Check</button>
+                    </div>
+                    <div class="block px-3 text-left">
+                        <p class="text-xs lg:text-base mb-1">*Example :</p>
+                        <p class="text-xs lg:text-base mx-2">raragi@gmail.com</p>
+                        <p class="text-xs lg:text-base mx-2">gira.ragi@shelby.inc.id</p>
+                        <p class="text-xs lg:text-base mx-2">adam-levine@lostars.co.id</p>
+                    </div>
+                </div>
+                <div class="w-1/2 text-center border">
+                    <h4 class="text-center font-semibold py-1">Password</h4>
+                    <hr class="border-b-4">
+                    <input id="password" class="mt-6 px-2 py-1" type="password">
+                    <div class="text-center">
+                        <button
+                            class="bg-black text-white rounded-lg hover:bg-white hover:text-black border my-4 px-6 py-2"
+                            onclick="vadlidatePassword()">Check</button>
+                    </div>
+                    <div class="block px-3 text-left">
+                        <p class="text-xs lg:text-base mb-1">*Note :</p>
+                        <p class="text-xs lg:text-base mx-2">1. Min of number of chars is 6</p>
+                        <p class="text-xs lg:text-base mx-2">2. Max of number of chars is 16</p>
+                        <p class="text-xs lg:text-base mx-2">3. The password has at least one number</p>
+                        <p class="text-xs lg:text-base mx-2">4. The password has at least one special character</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Email & Password Validation end -->
+</body>
+<script src="main.js"></script>
+
+</html>
